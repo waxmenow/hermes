@@ -1,0 +1,394 @@
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
+<!--<script src="//cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.js"></script>-->
+
+
+  <!-- UIkttttttit jubile JS -->
+  <script src="js/uikit.min.js"></script>
+  <script src="js/core/smooth-scroll.js"></script>
+  <script src="js/core/grid.js"></script>
+  <script src="js/components/autocomplete.js"></script>
+  <script src="js/components/datepicker.min.js"></script>
+  <script src="js/components/timepicker.min.js"></script>
+  <script src="js/components/form-select.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/button.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+  <!--<script src="https://cdn.cdncode.com/zenscroll/4.0.0/zenscroll-min.js"></script>-->
+
+  <script src="js/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/b4b53ee147.js"></script>
+
+
+  <!-- local scripts -->
+  <script src="js/waxmenow.js"></script>
+
+
+  <!-- stylesheets  -->
+  <link href="css/waxmenow.css" rel="stylesheet" type="text/css">
+  <link href="css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
+  <link href="css/uikit.gradient.addons.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/stripe2.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
+</head>
+
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------------------------>
+
+
+<body>
+
+  <!-- Floating total on top -->
+  <div>
+    <p class="dashed-box"; id="tot">TOTAL=$0</p>
+  </div>
+
+
+  <header class="header" data-uk-parallax="{bg: 100}">
+
+
+
+    <div class="container"  data-uk-parallax="{opacity:0.1,1}">
+      <br>
+
+
+      <h1 class="bigBig">Wax</h1>
+      <h1 class="bigBig">Me</h1>
+      <h1 class="bigBig">Now</h1>
+
+      <h2  class="goldSmallText center">In-Home Premium Waxing Services <i class='fa fa-question-circle'  title="WaxMeNow provides premium in-home waxing, provided by our curated staff of experienced and seasoned waxers.  Our focus in on convenience, professionalism, and security." uk-tooltip="pos: bottom-right"></i></h2>
+      <h2  class="goldSmallText center">***ONLY IN MIAMI BEACH!!***</h2>
+
+
+      <br>
+
+      <h2 class="goldSmallText round-corners" onclick=" validateSection(); revealSection('sales'); gotoSection('sales')">Dare to be bare - Choose your service</h2>
+
+      <br>
+      <br>
+
+
+
+
+
+      <br>
+    </div>
+    <br>
+    <!-- PlaceHolder Div to Load Grid of Services -->
+    <div class="sales" id="sales">
+      <br>
+      <br>
+      <br>
+
+      <p class="goldSmallText">Choose the services you would like to receive.. we come to you!</p>
+      <br>
+      <div  class="center" id="serviceGrid"></div>
+      <br>
+      <br>
+      <h2 class="goldSmallText round-corners" onclick="revealSection('whoareyou'); gotoSection('whoareyou')">ok.. who is getting waxed?</h2>
+      <br>
+      <br>
+
+    </header>
+
+
+  </div>
+
+  <br>
+
+
+
+
+
+  <div class="whoareyou" id="whoareyou">
+    <div class="container">
+      <br>
+      <br>
+
+      <h1 style="color:#000;   opacity:.5; font-size: 4vw; font-family: 'TapeWorm', Arial, sans-serif;">Wax Me Now</h1>
+      <br><br>
+
+
+
+
+
+      <form class="uk-form uk-form-stacked" target = "contact-record" id="contact-form" action="https://ripple-dimple.glitch.me/registeruser" method="POST">
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText"   for="">First Name</label>
+          <input type="text" id="firstName" name="firstName" data-validation="required" placeholder="">
+        </div>
+
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText"  for="">Last Name</label>
+          <input type="text" id="lastName" name="lastName" data-validation="required" placeholder="">
+        </div>
+
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText"  for="">Email Address</label>
+          <input type="text" data-validation="email" id="emailAddress" name="emailAddress" placeholder="">
+        </div>
+
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText"  for="">Mobile</label>
+          <input type="text" data-validation="required" name="phoneNumber" id="mobile" placeholder="">
+        </div>
+
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText" for="">Zip Code</label>
+          <input type="text" datavalidation="required" name="zipcode" id="zipcodeRadius" placeholder="">
+        </div>
+
+
+        <div class="uk-form-row">
+          <label class="uk-form-label goldSmallText" for="">Did some one refer you? enter their code here</label>
+          <input type="text" datavalidation="required" name="referralID" id="referralID" placeholder="">
+        </div>
+        </form>
+
+      <h2 class="goldSmallText round-corners"  onclick="document.getElementById('contact-form').submit(); revealSection('whenwax'); gotoSection('whenwax')">WHEN ARE YOU AVAILABLE?</h2>
+
+    </div>
+  </div>
+
+
+  <div class="whenwax" id="whenwax">
+    <div class="container">
+      <br>
+      <br>
+
+      <h1 style="color:grey;   opacity:.5; font-size: 4vw; font-family: 'TapeWorm', Arial, sans-serif;">Wax Me Now</h1>
+      <p class="goldSmallText">How's your schedule lookin furry bear?</h1>
+
+        <br><br>
+
+        <div id="datepicker"></div>
+
+        <form action="/" class="uk-form-stacked" id="schedule-form" target = "appointment-record" action="https://ripple-dimple.glitch.me/createScheduleRecord" method="POST">
+
+
+          <div class="uk-form-row">
+            <label class="uk-form-label goldSmallText"  for="">What Day you wanna do tha wax?</label>
+            <input type="date" name="startDate" id="startDate" data-validation="required" data-uk-datepicker="{minDate:0, format:'MM/DD/YYYY'}">
+          </div>
+          <br>
+          <br>
+
+          <div class="uk-form-row">
+            <label class="uk-form-label goldSmallText"  for="">Whats the earliest start time that will work for you?</label>
+            <input type="time" name="startTime" id="startTime" data-validation="required" data-uk-timepicker="{ format:'12h'}">
+          </div>
+
+          <br>
+          <br>
+
+          <div class="uk-form-row">
+            <label class="uk-form-label goldSmallText"  for="">When do you need to be finished?</label>
+            <input type="time" name="endTime" id="endTime" data-validation="required" data-uk-timepicker="{format:'12h'}">
+          </div>
+          <br>
+          <br>
+          <br>
+
+
+          <h2 class="goldSmallText round-corners"  onclick="document.getElementById('schedule-form').submit(); revealSection('wherewax'); gotoSection('wherewax')">WHERE WILL THE WAX FALL?</h2>
+
+
+
+        </form>
+      </div>
+    </div>
+
+
+    <div class="wherewax" id="wherewax">
+      <div class="container">
+        <br><br>
+        <h1 style="color:grey;   opacity:.5; font-size: 4vw; font-family: 'TapeWorm', Arial, sans-serif;">Wax Me Now</h1>
+        <p class="goldSmallText">Where is it going down?</h1>
+
+          <br><br>
+          <body>
+            <form action="/" class="uk-form-stacked" id="location-form" target = "location-record" action="https://ripple-dimple.glitch.me/setLocation" method="POST">
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText" for="">Enter Your Address</label>
+                <input id="autocomplete"  name="googlezoogle"  id="googlezoogle" onFocus="geolocate()" type="text" type="text" placeholder="">
+              </div>
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText"  for"">Street Number</label>
+                <input type ="text" data-validation="required" name="street_number" id="street_number">
+              </div>
+
+
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText"  for"">Street Name</label>
+                <input type ="text" data-validation="required" name="route" id="route">
+              </div>
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText" for"">Apt Number</label>
+                <input type ="text" data-validation="required" name="aptNumber" id="aptNumber">
+              </div>
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText"  for"">City</label>
+                <input type ="text" data-validation="required" name="locality" id="locality">
+              </div>
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText"  for"">State</label>
+                <input type ="text" data-validation="required" name="administrative_area_level_1" id="administrative_area_level_1">
+              </div>
+
+              <div class="uk-form-row goldSmallText">
+                <label class="uk-form-label goldSmallText"  for"">Zip Code</label>
+                <input type ="text" data-validation="required" name="postal_code" id="postal_code">
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <input id="locationRecord" name="locationRecord" type="hidden" value=$( "div.location-record" ).html();>
+              <input id="memberName" name="memberName" type="hidden");>
+              <h2 class="goldSmallText round-corners"  onclick="setLocationValues(); createConfirmScreen(); document.getElementById('location-form').submit(); revealSection('confirmwax'); gotoSection('confirmwax')">is it rite?</h2>
+
+
+
+            </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+        <br>
+        <!--<div id="locationField">
+        <input id="autocomplete" placeholder="Enter your address"
+        onFocus="geolocate()" type="text"></input>
+      </div>-->
+<div class="johnny" id="johnny">
+      <div class="container">
+        <div class="confirmwax" id="confirmwax">
+          <br><br><br><br>
+          <h1 style="color:#FFD700;   opacity:.5; font-size: 4vw; font-family: 'TapeWorm', Arial, sans-serif;">Wax Me Now</h1>
+          <p class="greySmallText">Are you ready to rip it?</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="greySmallText">We will come to your place and wax your body in these places:</p>
+            <!-- Replace the value of the key parameter with your own API key. -->
+
+
+          </div>
+
+   <form>
+          <div class="uk-form-row goldSmallText">
+
+            <input type ="text"  hidden="true" name="serviceString" id="serviceString">
+
+          </div>
+  </form>
+          <h2 id="customButton" class="goldSmallText round-corners"  onclick="updateServices(); revealSection('transact'); gotoSection('transact')">Proceed to Payment</h2>
+
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+
+    <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+      image: 'images/waxmenow_50X50.jpg',
+      locale: 'auto',
+      token: function(token) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+      }
+    });
+
+    document.getElementById('customButton').addEventListener('click', function(e) {
+      // Open Checkout with further options:
+      handler.open({
+        name: 'WaxMeNow',
+        description: 'Payment Info',
+        zipCode: true,
+        amount: total * 100
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation:
+    window.addEventListener('popstate', function() {
+      handler.close();
+    });
+    </script>
+
+
+        </div>
+      </div>
+
+
+
+        <div class="transact" id="transact">
+          <div class="container">
+<br><br><br>
+        <!--    <div id="pmt">
+            <form>
+              <div  class="group">
+                <label>
+                  <span>Name</span>
+                  <input name="cardholder-name" class="field" placeholder="Jane Doe" />
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input class="field" placeholder="(123) 456-7890" type="tel" />
+                </label>
+              </div>
+              <div class="group">
+                <label>
+                  <span>Card</span>
+                  <div id="card-element" class="field"></div>
+                </label>
+              </div>
+              <button type="submit">Pay $25</button>
+              <div class="outcome">
+                <div class="error" role="alert"></div>
+                <div class="success">
+                  Success! Your Stripe token is <span class="token"></span>
+                </div>
+              </div>
+            </form>
+          </div> -->
+
+
+          </div>
+        </div>
+        <iframe id="contact-record" name="contact-record"></iframe>
+        <iframe id="appointment-record" name="appointment-record"></iframe>
+        <iframe id="location-record" name="location-record"></iframe>
+        <iframe id="servicesTarget" name="servicesTarget"></iframe>
+        </body>
+
+
+        <audio id="play" src="audio/scleep.mp3" type="audio/mpeg" autostart="false" ></audio>
+
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="js/stripe.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdqp2OGCVBytRHyQedYHyfbJZRzLvYRl0&callback=initAutocomplete&libraries=places" type="text/javascript"></script>
+
+      </html>
+                                                        
