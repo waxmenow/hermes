@@ -1,0 +1,118 @@
+
+#pmt * {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  padding: 0;
+  margin: 0;
+}
+
+#pmt html {
+  height: 100%;
+}
+
+#pmt body {
+  background: #F6F9FC;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+
+#pmt form {
+  width: 480px;
+  margin: 20px auto;
+}
+
+#pmt label {
+  position: relative;
+  color: #6A7C94;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#pmt label > span {
+  float: left;
+}
+
+#pmt .field {
+  background: white;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid #CFD7DF;
+  border-radius: 24px;
+  color: #32315E;
+  outline: none;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  cursor: text;
+  width: 76%;
+  float: right;
+}
+
+#pmt .field::-webkit-input-placeholder { color: #CFD7DF; }
+#pmt .field::-moz-placeholder { color: #CFD7DF; }
+#pmt .field:-ms-input-placeholder { color: #CFD7DF; }
+
+#pmt .field:focus,
+.#pmt field.StripeElement--focus {
+  border-color: #F99A52;
+}
+
+#pmt button {
+  float: left;
+  display: block;
+  background-image: linear-gradient(-180deg, #F8B563 0%, #F99A52 100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), inset 0 -1px 0 0 #E57C45;
+  color: white;
+  border-radius: 24px;
+  border: 0;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  outline: none;
+}
+
+#pmt button:focus {
+  background: #EF8C41;
+}
+
+#pmt button:active {
+  background: #E17422;
+}
+
+#pmt .outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  min-height: 20px;
+  text-align: center;
+}
+
+#pmt .success, .error {
+  display: none;
+  font-size: 13px;
+}
+
+#pmt .success.visible, .error.visible {
+  display: inline;
+}
+
+#pmt .error {
+  color: #E4584C;
+}
+
+#pmt .success {
+  color: #F8B563;
+}
+
+#pmt .success .token {
+  font-weight: 500;
+  font-size: 13px;
+}

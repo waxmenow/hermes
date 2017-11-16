@@ -1,0 +1,40 @@
+@font-face{
+	font-family: 'TapeWorm';
+	src: url('../fonts/TapeWorm.woff') format('woff'),
+	     url('../fonts/TapeWorm.ttf') format('truetype'),
+}
+
+
+.header {
+    background-image: url(../images/waxmeGradient.png);
+    background-size: cover;
+}
+
+.whoareyou
+   {
+       background: url(../images/whoareyou.png);
+       background-size: cover;
+       height: 100%;
+  }
+
+.header-inner {
+    /* limit width*/
+    max-width: 70%;
+
+    /* center */
+    margin: 0 auto;
+
+    /* space out parent */
+   padding: 100px 10px 250px 200px;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /* realign headline on smaller devices */
+    .header-inner {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 100px 10px;
+    }
+}

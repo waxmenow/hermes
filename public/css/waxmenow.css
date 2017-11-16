@@ -1,0 +1,374 @@
+/*@font-face{
+	font-family: 'TapeWorm';
+	src: url('../fonts/TapeWorm.woff') format('woff'),
+	     url('../fonts/TapeWorm.woff2') format('woff2'),
+	     url('../fonts/TapeWorm.ttf') format('truetype'),
+}*/
+
+@font-face {
+    font-family: 'TapeWorm';
+    src: url('../fonts/tapeworm-webfont.woff2') format('woff2'),
+         url('../fonts/tapeworm-webfont.woff') format('woff'),
+         url('../fonts/tapeworm-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,
+body {
+  font-size:16px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  bgcolor: #000000;
+	background-color:black;
+}
+
+
+/*@keyframes colorchange
+ {
+   0%   {background: #73AD21;}
+   25%  {background: yellow;}
+   50%  {background: blue;}
+   75%  {background: green;}
+   100% {background: red;}
+ }
+
+ @-webkit-keyframes colorchange
+ {
+   0%   {background: red;}
+   25%  {background: yellow;}
+   50%  {background: blue;}
+   75%  {background: green;}
+   100% {background: red;}
+ }*/
+
+* {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+
+  line-height: 1.5;
+}
+
+/* POSITIONING */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.header {
+    background-image: url(../images/waxmeGradient_title_split_top.png);
+    background-size: 180%;
+    repeat: false;
+    font-size:16px;
+}
+
+.sales
+   {
+       background: url(../images/waxmeGradient_title_split_bottom.png);
+       background-size: cover;
+       height: 100%;
+  }
+.whoareyou
+   {
+       background: url(../images/whoareyou.png);
+       background-size: cover;
+       height: 100%;
+  }
+
+.whenwax
+     {
+         background: url(../images/space_iss.jpg);
+         background-size: cover;
+         height: 100%;
+}
+
+.wherewax
+      {
+                background: url(../images/sky_city.jpg);
+                background-size: cover;
+                height: 100%;
+           }
+
+
+.johnny
+                {
+                    background: url(../images/purple.png);
+                    background-size: cover;
+                    height: 100%;
+               }
+
+
+p {
+	  font-size: 120%;
+	  font-weight: 200;
+	  line-height: 1.8;
+	}
+
+.bigBig {
+	color:#84d5f7;
+	line-height: 100%;
+	font-size:9em;
+	text-align:center; opacity:.5;
+	font-family: 'TapeWorm', Arial, sans-serif;
+}
+
+.header-inner {
+    /* limit width*/
+    max-width: 70%;
+
+    /* center */
+    margin: 0 auto;
+
+    /* space out parent */
+   padding: 100px 10px 250px 200px;
+
+}
+
+
+
+.waxMeColor {
+    color: #89a0c6;
+    font-family: 'Tapeworm', Arial, sans-serif;
+}
+
+.goldSmallText {
+  color:#FFD700;
+  opacity:.8;
+  font-size: 1em;
+  font-family: 'TapeWorm', Arial, sans-serif;
+}
+
+
+.boldgreySmallText {
+  color:black;
+  opacity:1;
+  font-size: 1em;
+  font-family: 'TapeWorm', Arial, sans-serif;
+}
+.greySmallText {
+  color:grey;
+  opacity:.8;
+  font-size: 1em;
+  font-family: 'TapeWorm', Arial, sans-serif;
+}
+.formArea {
+  padding-left: 20px;
+  margin-left: 20%;
+}
+.noselect {
+  cursor:default;
+  border-style: dotted;
+  border-width: .25px;
+  padding: 15px 5px 5px 5px;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+  .dashed-box {
+    position: fixed;
+    z-index: 2; /* put .green-box above .dashed-box */
+background-color: green;
+width: 18%;
+    left: 83%;
+    top: 0px;
+color:#84d5f7;
+opacity:.5;
+font-size: 1em;
+font-family: 'TapeWorm',
+ Arial, sans-serif;
+    opacity: 0.9;
+  }
+
+
+
+  .round-corners {
+    /*animation: colorchange 50s;
+    -webkit-animation: colorchange 50s;*/
+    margin:auto;
+    border-radius: 15px 50px;
+    background:green;
+    padding: 25px;
+    width: 25vw;
+    text-align: center;
+    border-width: medium;
+    border-color:grey;
+}
+
+body {
+  animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 50s; /* Chrome and Safari */
+}
+
+	/* #### Mobile Phones Portrait #### */
+	@media screen and (max-width: 480px) /*and (orientation: portrait)*/{
+	  /* some CSS here */
+
+    /* realign headline on smaller devices */
+    .header-inner {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 100px 10px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 60em) {
+  /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
+
+
+
+#pmt * {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  font-variant: normal;
+  padding: 0;
+  margin: 0;
+}
+
+#pmt html {
+  height: 100%;
+}
+
+#pmt body {
+  background: #F6F9FC;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+
+#pmt form {
+  width: 480px;
+  margin: 20px auto;
+}
+
+#pmt label {
+  position: relative;
+  color: #6A7C94;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#pmt label > span {
+  float: left;
+}
+
+#pmt .field {
+  background: white;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid #CFD7DF;
+  border-radius: 24px;
+  color: #32315E;
+  outline: none;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+  cursor: text;
+  width: 76%;
+  float: right;
+}
+
+#pmt .field::-webkit-input-placeholder { color: #CFD7DF; }
+#pmt .field::-moz-placeholder { color: #CFD7DF; }
+#pmt .field:-ms-input-placeholder { color: #CFD7DF; }
+
+#pmt .field:focus,
+.#pmt field.StripeElement--focus {
+  border-color: #F99A52;
+}
+
+#pmt button {
+  float: left;
+  display: block;
+  background-image: linear-gradient(-180deg, #F8B563 0%, #F99A52 100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), inset 0 -1px 0 0 #E57C45;
+  color: white;
+  border-radius: 24px;
+  border: 0;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  outline: none;
+}
+
+#pmt button:focus {
+  background: #EF8C41;
+}
+
+#pmt button:active {
+  background: #E17422;
+}
+
+#pmt .outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  min-height: 20px;
+  text-align: center;
+}
+
+#pmt .success, .error {
+  display: none;
+  font-size: 13px;
+}
+
+#pmt .success.visible, .error.visible {
+  display: inline;
+}
+
+#pmt .error {
+  color: #E4584C;
+}
+
+#pmt .success {
+  color: #F8B563;
+}
+
+#pmt .success .token {
+  font-weight: 500;
+  font-size: 13px;
+}
