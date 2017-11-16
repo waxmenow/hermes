@@ -376,16 +376,16 @@ function geolocate() {
 }
 
 
-/* function goGo(e) {
+function goGo(e) {
   revealSection(e);
   gotoSection(e);
-}*/
+}
 
-/*function goGo(a) {
+function goGo(a) {
     var s = document.getElementById(a);
     if (!s) return true;
 
     UIkit.Utils.scrollToElement(UIkit.$(s, {
         duration: 800
     }));
-}*/
+}
