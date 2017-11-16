@@ -36,18 +36,17 @@ var mc = memjs.Client.create('mc3.dev.ec2.memcachier.com:11211', {
 // the body parser is what reads post requests.
 var bodyParser = require('body-parser');
 
-//before deployment to aws.. restore the MEMCACHE LINES BELOW
 app.use(session({ 
   secret: 'my-name-is-ozymandias-king-of-kings', 
   cookie: { maxAge: 60000 },
   proxy   : 'true',
    secure: false,
- //store   : new MemcachedStore({
- //       hosts: ['waxmenowmem.24l8cc.0001.use1.cache.amazonaws.com:11211'], //this should be where your Memcached server is running
- //      secret: 'memcached-secret-key'
+ store   : new MemcachedStore({
+        hosts: ['waxmenowmem.24l8cc.0001.use1.cache.amazonaws.com:11211'], //this should be where your Memcached server is running
+       secret: 'memcached-secret-key'
 //     username: 'F53955',
  //   password: '73AAAEEECFF4C7A65977B169C76FEF2F'
-// })
+ })
 }));
  
 app.use(bodyParser.json());
