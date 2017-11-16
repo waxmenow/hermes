@@ -22,24 +22,15 @@
 # Registers:
 
 # File marks:
-'0  202  0  ~/public/index.html
-'1  57  0  ~/server.js
-'2  56  46  ~/server.js
+'0  57  0  ~/server.js
+'1  56  46  ~/server.js
 
 # Jumplist (newest first):
--'  202  0  ~/public/index.html
--'  1  0  ~/public/index.html
--'  57  0  ~/server.js
--'  1  0  ~/server.js
--'  56  46  ~/server.js
 -'  57  0  ~/server.js
 -'  1  0  ~/server.js
 -'  56  46  ~/server.js
 
 # History of marks within files (newest to oldest):
-
-> ~/public/index.html
-	"	202	0
 
 > ~/server.js
 	"	57	0
