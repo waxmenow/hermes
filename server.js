@@ -53,7 +53,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-
+app.use(express.static(__dirname + '/public'));
 router.get('/', function(req, res) {
      res.sendFile(__dirname + '/views/index.html');
 });
