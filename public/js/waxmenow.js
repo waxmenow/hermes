@@ -9,8 +9,8 @@
 //  var POSTHOST = "https://localhost";
 //var POSTHOST = "https://imminent-walker.glitch.me";
 //var POSTHOST = "https://grandiose-ink.glitch.me";
-var POSTHOST = "https://zealous-quapo.glitch.me";
-//var POSTHOST = "";
+//var POSTHOST = "https://zealous-quapo.glitch.me";
+var POSTHOST = " ";
 
 
 var total = 0;
@@ -98,12 +98,12 @@ window.onload = function () {
     //since always testing different post addresses, parameterize the host fields for the forms here
     //production
 
-    document.getElementById('contact-form').action = POSTHOST + "/registeruser";
+    document.getElementById('contact-form').action = "/registeruser";
     console.log("STREET NUMER: " + document.getElementById('street_number').value);
-    console.log(POSTHOST + "/registeruser");
+    console.log("/registeruser");
 
-    document.getElementById('schedule-form').action = POSTHOST + "/createScheduleRecord";
-    document.getElementById('location-form').action = POSTHOST + "/setLocation";
+    document.getElementById('schedule-form').action = "/createScheduleRecord";
+    document.getElementById('location-form').action = "/setLocation";
 };
 
 
@@ -160,7 +160,7 @@ $(document).ready(function () {
 
 
 function updateServices() {
-    var dest = '"' + POSTHOST + "/updateServices" + '"';
+    var dest = "/updateServices";
     console.log("***dest***: " + dest);
 
     var a = JSON.stringify(waxes);
@@ -226,7 +226,7 @@ function gotoSection(a) {
 
 
 
-/*function get_services() {
+function get_services() {
 
     //use later to dynamically load the waxes array from database
     var jsonData = '{"0":"1","1":"2","2":"3","3":"4"}';
@@ -239,7 +239,7 @@ function gotoSection(a) {
         arr.push(parsed[x]);
     }
 
-}*/
+}
 
 
 // function to determine what grid element was clicked and set the array flag to 1 when on and 0 when off
