@@ -4,11 +4,12 @@
 /*global $ */
 /*jshint strict:false*/
 //var POSTHOST = "https://free.waxmenow.com"
-var POSTHOST = "http://waxmenow.us-east-1.elasticbeanstalk.com";
+//var POSTHOST = "http://waxmenow.us-east-1.elasticbeanstalk.com";
 //gitch.com testing
 //  var POSTHOST = "https://localhost";
 //var POSTHOST = "https://imminent-walker.glitch.me";
 //var POSTHOST = "https://grandiose-ink.glitch.me";
+var POSTHOST = "https://zealous-quapo.glitch.me";
 //var POSTHOST = "";
 
 
