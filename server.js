@@ -41,13 +41,12 @@ app.use(session({
   cookie: { maxAge: 60000 },
   proxy   : 'true',
    secure: false,
- //********* restore below 5 lines before deployment to AWS
-  //store   : new MemcachedStore({
-   //     hosts: ['waxmenowmem.24l8cc.0001.use1.cache.amazonaws.com:11211'], //this should be where your Memcached server is running
-   //    secret: 'memcached-secret-key'
+ store   : new MemcachedStore({
+        hosts: ['waxmenowmem.24l8cc.0001.use1.cache.amazonaws.com:11211'], //this should be where your Memcached server is running
+       secret: 'memcached-secret-key'
 //     username: 'F53955',
  //   password: '73AAAEEECFF4C7A65977B169C76FEF2F'
-// })
+ })
 }));
  
 app.use(bodyParser.json());
@@ -55,8 +54,8 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(express.static(__dirname + '/public'));
-
-router.get('/', function(req, res) {   res.sendFile(__dirname + '/public/index.html');
+router.get('/', function(req, res) {
+     res.sendFile(__dirname + '/views/index.html');
 });
 
 router.get('/acceptAppointment', function(req, res) {
