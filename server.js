@@ -168,8 +168,6 @@ function getmcValue(resultIndex, val, callback, p1,p2,p3) {
 }
 
 function createAppointmentRecord(startDate, availabilityStartTime, availabilityEndTime, Status) { 
-  console.log("print stuff: " + result[0]);
-    console.log("the name game " + result[0]);
 
     base('appointment').create({
         "appointmentDate": startDate,
@@ -218,7 +216,7 @@ function updateAppointmentRecord(waxes) {
     }
  console.log('rightbefore update arrayofwaxes: ' + arrayofWaxes.length)
     base('appointment').update(result[1], {
-           "memberName": [result[0]],
+           "memberName": [req.session.memberRecordID],
         "servicesRequested": arrayofWaxes,
       "appointmentLocation": [result[2]]
     }, function(err, record) {
@@ -271,8 +269,10 @@ router.post('/updateServices', function(req, res) {
 });
 
 router.post('/setLocation', function(req, res) {
+  //test session store of record id compare to result[0] to get rid of memjs
+  console.log("inside of setLocation route, memberRecordID from req.session is: " + req.session.memberRecordID);
     base('memberLocation').create({
-        "memberName": [result[0]],
+        "memberName": [req.session.memberRecordID],
         "addressStreet01": req.body.street_number + " " + req.body.route,
         "aptNumber": req.body.aptNumber,
         "city": req.body.locality,
