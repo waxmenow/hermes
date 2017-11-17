@@ -177,14 +177,14 @@
 
 
           <div class="uk-form-row">
-            <label class="uk-form-label goldSmallText"  for="">What Day you wanna do tha wax?</label>
+            <label class="uk-form-label goldSmallText">What Day you wanna do tha wax?</label>
             <input type="date" name="startDate" id="startDate" data-validation="required" data-uk-datepicker="{minDate:0, format:'MM/DD/YYYY'}">
           </div>
           <br>
           <br>
 
           <div class="uk-form-row">
-            <label class="uk-form-label goldSmallText"  for="">Whats the earliest start time that will work for you?</label>
+            <label class="uk-form-label goldSmallText">Whats the earliest start time that will work for you?</label>
             <input type="time" name="startTime" id="startTime" data-validation="required" data-uk-timepicker="{ format:'12h'}">
           </div>
 
@@ -192,7 +192,7 @@
           <br>
 
           <div class="uk-form-row">
-            <label class="uk-form-label goldSmallText"  for="">When do you need to be finished?</label>
+            <label class="uk-form-label goldSmallText">When do you need to be finished?</label>
             <input type="time" name="endTime" id="endTime" data-validation="required" data-uk-timepicker="{format:'12h'}">
           </div>
           <br>
@@ -216,50 +216,50 @@
         <p class="goldSmallText">Where is it going down?</p>
 
           <br><br>
-          <body>
+        
             <form class="uk-form-stacked" id="location-form" target = "location-record" action="https://ripple-dimple.glitch.me/setLocation" method="POST">
               <div class="uk-form-row goldSmallText">
                 <label class="uk-form-label goldSmallText" for="">Enter Your Address</label>
-                <input id="autocomplete"  name="googlezoogle"  id="googlezoogle" onfocus="geolocate()" type="text" type="text" placeholder="">
+                <input id="autocomplete" onfocus="geolocate()" type="text" placeholder="">
               </div>
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText"  for"">Street Number</label>
+                <label class="uk-form-label goldSmallText">Street Number</label>
                 <input type ="text" data-validation="required" name="street_number" id="street_number">
               </div>
 
 
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText"  for"">Street Name</label>
+                <label class="uk-form-label goldSmallText">Street Name</label>
                 <input type ="text" data-validation="required" name="route" id="route">
               </div>
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText" for"">Apt Number</label>
+                <label class="uk-form-label goldSmallText">Apt Number</label>
                 <input type ="text" data-validation="required" name="aptNumber" id="aptNumber">
               </div>
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText"  for"">City</label>
+                <label class="uk-form-label goldSmallText">City</label>
                 <input type ="text" data-validation="required" name="locality" id="locality">
               </div>
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText"  for"">State</label>
+                <label class="uk-form-label goldSmallText">State</label>
                 <input type ="text" data-validation="required" name="administrative_area_level_1" id="administrative_area_level_1">
               </div>
 
               <div class="uk-form-row goldSmallText">
-                <label class="uk-form-label goldSmallText"  for"">Zip Code</label>
+                <label class="uk-form-label goldSmallText">Zip Code</label>
                 <input type ="text" data-validation="required" name="postal_code" id="postal_code">
               </div>
 
               <br>
               <br>
               <br>
-              <input id="locationRecord" name="locationRecord" type="hidden" value=$( "div.location-record" ).html();>
-              <input id="memberName" name="memberName" type="hidden");>
+              <input id="locationRecord" name="locationRecord" type="hidden" value=$( "div.location-record" ).html()>
+              <input id="memberName" name="memberName" type="hidden">
               <h2 class="goldSmallText round-corners"  onclick="createConfirmScreen(); document.getElementById('location-form').submit(); revealSection('confirmwax'); gotoSection('confirmwax')">is it rite?</h2>
 
 
@@ -284,7 +284,7 @@
         <div class="confirmwax" id="confirmwax">
           <br><br><br><br>
           <h1 style="color:#FFD700;   opacity:.5; font-size: 4vw; font-family: 'TapeWorm', Arial, sans-serif;">Wax Me Now</h1>
-          <p class="greySmallText">Are you ready to rip it?</h1>
+          <p class="greySmallText">Are you ready to rip it?</p>
             <br>
             <br>
             <br>
@@ -294,7 +294,9 @@
 
 
           </div>
-
+  </div>
+  </div>
+  
    <form>
           <div class="uk-form-row goldSmallText">
 
@@ -380,7 +382,7 @@
         <iframe id="appointment-record" name="appointment-record"></iframe>
         <iframe id="location-record" name="location-record"></iframe>
         <iframe id="servicesTarget" name="servicesTarget"></iframe>
-        </body>
+
 
 
         <audio id="play" src="audio/click_sound.mp3" type="audio/mpeg" autostart="false" ></audio>
@@ -388,5 +390,5 @@
         <script src="https://js.stripe.com/v3/"></script>
         <script src="js/stripe.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdqp2OGCVBytRHyQedYHyfbJZRzLvYRl0&callback=initAutocomplete&libraries=places" type="text/javascript"></script>
-
+        </body>
       </html>
