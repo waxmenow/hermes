@@ -170,14 +170,15 @@ function getmcValue(resultIndex, val, callback, p1,p2,p3) {
 function createAppointmentRecord(startDate, availabilityStartTime, availabilityEndTime, Status) { 
   console.log("print stuff: " + result[0]);
     console.log("the name game " + result[0]);
- console.log("startDate insde of createAppointmentRecord:" + startDate);
+
     base('appointment').create({
         "appointmentDate": startDate,
         "availabilityStartTime": availabilityStartTime,
         "availabilityEndTime": availabilityEndTime,
         "Status": "Awaiting Assignment",
+      // group set to MIAMI record ID.. extend later for expansion.
         "group": [ "recy8zny8oO3X0mt2" ]
-     
+    
     }, function(err, record) {
         if (err) {
             console.error(err);
