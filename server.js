@@ -187,7 +187,7 @@ function createAppointmentRecord(startDate, availabilityStartTime, availabilityE
                 console.log("Schedule Record shows memberRecordId as " + value.toString());
             }
             mc.set('appointmentRecordId', record.getId(), 'expires:20000');
-           req.session.appointmentRecordID = record.getId();
+
         });
 
         console.log(record.getId());
