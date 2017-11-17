@@ -187,6 +187,7 @@ function createAppointmentRecord(startDate, availabilityStartTime, availabilityE
                 console.log("Schedule Record shows memberRecordId as " + value.toString());
             }
             mc.set('appointmentRecordId', record.getId(), 'expires:20000');
+           req.session.appointmentRecordID = record.getId();
         });
 
         console.log(record.getId());
@@ -255,17 +256,12 @@ router.post('/createScheduleRecord', function(req, res) {
 router.post('/updateServices', function(req, res) {
     console.log("****** INSIDE /updateServices");
     console.log("serviceString from HTML POST: " + req.body.serviceString);
- 
   
-
-
-
     getmcValue(1,'appointmentRecordId', updateAppointmentRecord, req.body.serviceString,"peanuts","ginandtonic");
-
-
-
-
-  res.send("updateServices");
+  
+  
+  
+    res.send("updateServices");
 });
 
 router.post('/setLocation', function(req, res) {
